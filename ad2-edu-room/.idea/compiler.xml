@@ -9,6 +9,7 @@
         <module name="singleton" />
         <module name="factory" />
         <module name="facade" />
+        <module name="decorator" />
       </profile>
     </annotationProcessing>
   </component>
