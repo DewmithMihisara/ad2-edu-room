@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ad2-edu-room.iml" filepath="$PROJECT_DIR$/ad2-edu-room.iml" />
-      <module fileurl="file://$PROJECT_DIR$/singleton.iml" filepath="$PROJECT_DIR$/singleton.iml" />
     </modules>
   </component>
 </project>
