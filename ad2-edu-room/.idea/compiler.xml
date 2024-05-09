@@ -10,6 +10,7 @@
         <module name="factory" />
         <module name="facade" />
         <module name="decorator" />
+        <module name="strategy" />
       </profile>
     </annotationProcessing>
   </component>
