@@ -1,12 +1,18 @@
 package lk.ijse;
 
+import lk.ijse.geo.ShapeMaker;
+
 /**
  * @author Dewmith Mihisara
  * @date 2024-05-09
- * @since ${VERSION}
+ * @since 0.0.1
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        ShapeMaker shapeMaker = new ShapeMaker();
+        shapeMaker.drawCircle();
+        shapeMaker.drawRectangle();
+        shapeMaker.drawCircle();
+        shapeMaker.drawRectangle();
     }
 }
