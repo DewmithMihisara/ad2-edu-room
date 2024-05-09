@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/creation/factory/pom.xml" />
         <option value="$PROJECT_DIR$/structural/facade/pom.xml" />
         <option value="$PROJECT_DIR$/structural/decorator/pom.xml" />
+        <option value="$PROJECT_DIR$/behavioral/strategy/pom.xml" />
       </list>
     </option>
   </component>
