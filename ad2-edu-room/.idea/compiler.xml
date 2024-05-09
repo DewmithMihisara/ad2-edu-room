@@ -9,6 +9,7 @@
         <module name="singleton" />
         <module name="factory" />
         <module name="facade" />
+        <module name="observer" />
         <module name="decorator" />
         <module name="strategy" />
       </profile>
