@@ -12,9 +12,6 @@ public class Singleton {
     }
 
     public static Singleton getInstance() {
-        if (instance == null) {
-            instance = new Singleton();
-        }
-        return instance;
+        return instance==null?instance=new Singleton():instance;
     }
 }
