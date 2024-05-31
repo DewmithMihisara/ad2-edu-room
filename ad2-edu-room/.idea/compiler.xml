@@ -8,9 +8,10 @@
         <outputRelativeToContentRoot value="true" />
         <module name="singleton" />
         <module name="factory" />
-        <module name="facade" />
         <module name="observer" />
         <module name="decorator" />
+        <module name="copy-past" />
+        <module name="facade" />
         <module name="strategy" />
       </profile>
     </annotationProcessing>

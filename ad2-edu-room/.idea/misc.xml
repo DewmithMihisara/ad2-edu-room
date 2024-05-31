@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/structural/decorator/pom.xml" />
         <option value="$PROJECT_DIR$/behavioral/strategy/pom.xml" />
         <option value="$PROJECT_DIR$/behavioral/observer/pom.xml" />
+        <option value="$PROJECT_DIR$/copy-past/pom.xml" />
       </list>
     </option>
   </component>
