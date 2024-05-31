@@ -1,13 +1,13 @@
-package lk.ijse.customer_service;
+package com.example.service_reg;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CustomerServiceApplication {
+public class ServiceRegApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CustomerServiceApplication.class, args);
+		SpringApplication.run(ServiceRegApplication.class, args);
 	}
 
 }
