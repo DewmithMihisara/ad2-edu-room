@@ -1,10 +1,8 @@
 package com.example.customer_service.api;
 
+import com.example.customer_service.dto.ItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -27,15 +25,27 @@ public class CustomerController {
         return "Hello from Customer Service";
     }
 
-    @GetMapping("/getItemInCustomer")
-    public String getItemInCustomer() {
-        return restTemplate.getForObject("http://localhost:8081/api/v1/item/get", String.class);
+    @PostMapping("/post")
+    public ItemDTO post(@RequestBody ItemDTO itemDTO) {
+        System.out.println("this is post method that call using item service : "+itemDTO.toString());
+        itemDTO.setId("I-001");
+        itemDTO.setName("Item 1 from Customer Service");
+        itemDTO.setDescription("Item 1 Description from Customer Service");
+        return itemDTO;
     }
 
+    @PutMapping("/put")
+    public ItemDTO put(@RequestBody ItemDTO itemDTO) {
+        System.out.println("this is put method that call using item service : "+itemDTO.toString());
+        itemDTO.setId("I-001");
+        itemDTO.setName("Item 1 from Customer Service");
+        itemDTO.setDescription("Item 1 Description from Customer Service");
+        return itemDTO;
+    }
 
-    @PostMapping("/postItemInCustomer")
-    public String post() {
-        return "Hello from Customer Service";
+    @DeleteMapping("/delete/{id}")
+    public void delete(@PathVariable String id) {
+        System.out.println("this is delete method that call using item service : "+id);
     }
 
 }

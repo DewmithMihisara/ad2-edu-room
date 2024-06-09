@@ -1,5 +1,6 @@
 package com.example.item_service.api;
 
+import com.example.item_service.dto.ItemDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,8 +25,21 @@ public class ItemController {
         return "Hello from Item Service";
     }
 
-    @GetMapping("/postCustomerInItem")
-    public String post() {
-        return restTemplate.postForObject("http://localhost:8082/api/v1/customer/postItemInCustomer", "", String.class);
+    @GetMapping("/postItemInCustomer")
+    public ItemDTO postItemInCustomer() {
+        return restTemplate.postForObject("http://localhost:8082/api/v1/customer/post",
+                new ItemDTO("I-001", "Item 1 from Item Service", "Item 1 Description from Item Service")
+                , ItemDTO.class);
+    }
+
+    @GetMapping("/putItemInCustomer")
+    public void putItemInCustomer() {
+        restTemplate.put("http://localhost:8082/api/v1/customer/put",
+                new ItemDTO("I-001", "Item 1 from Item Service", "Item 1 Description from Item Service"));
+    }
+
+    @GetMapping("/deleteItemInCustomer")
+    public void deleteItemInCustomer() {
+        restTemplate.delete("http://localhost:8082/api/v1/customer/delete/I-001");
     }
 }
